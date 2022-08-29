@@ -2,9 +2,10 @@
 
 Она представляет собой более наглядный способ сравнить выражение сразу с несколькими вариантами.*/
 
-let a = parseFloat(parseInt(prompt('Введите 1-ое число')));
-let b = parseFloat(parseInt(prompt('Введите 2-ое число')));
-let operator = prompt('Введите оператор');
+
+let firstNumber = parseFloat(parseInt(prompt('Введите 1-ое число')));
+let secondNumber = parseFloat(parseInt(prompt('Введите 2-ое число')));
+let operator = prompt('Введите оператор','add,multi,subsctract');
 
 
 
@@ -13,24 +14,24 @@ let operator = prompt('Введите оператор');
 let result;
 
 switch(operator){
-  case '+' : result = a + b;
+  case 'add' : result = +firstNumber + +secondNumber;
   alert('Результат сложения ' + result);
   break;
-  case '-' : result = a - b;
+  case 'multi' : result = firstNumber * secondNumber;
    alert("Результат вычитания " + result);
   break;
-  case '*' : result = a * b;
+  case 'substract' : result = firstNumber - secondNumber;
    alert("Результат умножения " + result);
   break;
-  case '/' : result = a / b;
-  alert("Результат деления " + result);
-  break;
-  default: result !== '+', '-','*','/'; alert('Неизвестное значение');
+ 
+  default: result !== 'add', 'multi','subsctract'; alert('Неизвестное значение');
 }
 
 
 
-  //для теста
+    
+
+
 
     
 
